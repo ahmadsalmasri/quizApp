@@ -17,9 +17,8 @@ class QuizController extends Controller
     }
 
     public function cssquizAction(Request $request) {
-        //dd($request->all());
-        //dd($request->cssQ30);
         $countCorrectAnswer = 0;
+        $correctPrcentage = 0;
 
         if($request->cssQ1 === 'right')
             $countCorrectAnswer++;
@@ -82,14 +81,14 @@ class QuizController extends Controller
         if($request->cssQ30 === 'right')
             $countCorrectAnswer++;                                                 
 
-        //dd($countCorrectAnswer);
         Quiz::create([
             'course_name' => 'css',
             'question_number' => 30,
             'result' => $countCorrectAnswer,
             'user_id' => auth()->user()->id,
         ]);
-        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 30']);;
+        $correctPrcentage = ($countCorrectAnswer * 100) / 30;
+        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 30. Result '. round($correctPrcentage,2). '%']);;
     }
     public function jsquiz() {
         return view('quiz.js');
