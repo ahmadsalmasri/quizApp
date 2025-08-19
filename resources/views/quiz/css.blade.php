@@ -482,7 +482,7 @@
                     if(this.selectedCssQ30 === 'right')
                         this.sumCSSQuizResult++;
                                             
-                    alert(this.sumCSSQuizResult);
+                    alert('correct answer is ' + this.sumCSSQuizResult);
                     this.sumCSSQuizResult = 0;
                 },
             },
