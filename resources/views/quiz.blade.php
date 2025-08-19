@@ -9,7 +9,7 @@
         <li> <a href="{{ route('pythonQuiz') }}">Python Quiz</a> </li>
         <li> <a href="{{ route('phpQuiz') }}">PHP Quiz</a> </li>
         <li> <a href="{{ route('nodejsQuiz') }}">Node.js Quiz</a> </li>
-        <li> <a href="{{ route('bootstrapQuiz') }}">Bootstrap Quiz</a> </li>
+        <li> <a href="{{ route('bootstrapQuiz') }}">Bootstrap-5 Quiz</a> </li>
         <li> <a href="{{ route('jqueryQuiz') }}">jQuery Quiz</a> </li>
         <li> <a href="{{ route('vuejsQuiz') }}">Vue.js Quiz</a> </li>
     </ol>

@@ -88,7 +88,7 @@ class QuizController extends Controller
             'user_id' => auth()->user()->id,
         ]);
         $correctPrcentage = ($countCorrectAnswer * 100) / 30;
-        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 30. Result '. round($correctPrcentage,2). '%']);;
+        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 30. Result '. round($correctPrcentage,2). '%']);
     }
     public function jsquiz() {
         return view('quiz.js');
@@ -108,6 +108,71 @@ class QuizController extends Controller
 
     public function bootstrapquiz() {
         return view('quiz.bootstrap');
+    }
+    public function bootstrapquizAction(Request $request)
+    {
+        $countCorrectAnswer = 0;
+        $correctPrcentage = 0;
+
+        if($request->bootstrapQ1 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ2 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ3 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ4 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ5 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ6 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ7 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ8 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ9 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ10 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ11 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ12 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ13 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ14 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ15 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ16 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ17 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ18 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ19 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ20 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ21 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ22 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ23 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ24 === 'right')
+            $countCorrectAnswer++;
+        if($request->bootstrapQ25 === 'right')
+            $countCorrectAnswer++;                                                 
+
+        Quiz::create([
+            'course_name' => 'bootstrap',
+            'question_number' => 25,
+            'result' => $countCorrectAnswer,
+            'user_id' => auth()->user()->id,
+        ]);
+        $correctPrcentage = ($countCorrectAnswer * 100) / 25;
+        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 25. Result '. round($correctPrcentage,2). '%']);
     }
 
     public function jqueryquiz() {
