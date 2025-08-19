@@ -89,7 +89,7 @@ class QuizController extends Controller
             'result' => $countCorrectAnswer,
             'user_id' => auth()->user()->id,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 30']);;
     }
     public function jsquiz() {
         return view('quiz.js');

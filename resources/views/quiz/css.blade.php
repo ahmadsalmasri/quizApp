@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+@if(Session::has('success_complate'))
+    <div class="col-md-12 alert alert-success alert-dismissible text-center float-center font-weight-bold mt-2 ml-0 radius" role="alert">
+        {{ Session::get('success_complate') }}
+    </div>
+@endif
 <div class="text-center">
     <a class="text-secondary" href="{{ route('quiz') }}">back to quiz</a>
 </div>
