@@ -8,8 +8,15 @@
     </div>
 </div>
 @endif
-<div class="text-center">
-    <a class="text-secondary" href="{{ route('quiz') }}">back to quiz</a>
+<div class="row">
+    <div class="col-md-7 text-end">
+        <h2>bootstrap 5 Quiz</h2>
+    </div>
+    <div class="col-md-5">
+        <div class="text-end">
+            <a class="text-secondary m-5" href="{{ route('quiz') }}">back to quiz</a>
+        </div>
+    </div>
 </div>
 
 <div class="row" id="VueApp">
