@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="mt-5">
+    <p class="p-2">Available Quizss</p>
     <ol>
         <li> <a href="{{ route('cssQuiz') }}">CSS Quiz</a> </li>
         <li> <a href="{{ route('javascriptQuiz') }}">JavaScript Quiz</a> </li>
