@@ -20,66 +20,66 @@ class QuizController extends Controller
         $countCorrectAnswer = 0;
         $correctPrcentage = 0;
 
-        if($request->cssQ1 === 'right')
+        if($request->cssQ1 === 'cssQ1_3')
             $countCorrectAnswer++;
-        if($request->cssQ2 === 'right')
+        if($request->cssQ2 === 'cssQ2_1')
             $countCorrectAnswer++;
-        if($request->cssQ3 === 'right')
+        if($request->cssQ3 === 'cssQ3_2')
             $countCorrectAnswer++;
-        if($request->cssQ4 === 'right')
+        if($request->cssQ4 === 'cssQ4_3')
             $countCorrectAnswer++;
-        if($request->cssQ5 === 'right')
+        if($request->cssQ5 === 'cssQ5_2')
             $countCorrectAnswer++;
-        if($request->cssQ6 === 'right')
+        if($request->cssQ6 === 'cssQ6_1')
             $countCorrectAnswer++;
-        if($request->cssQ7 === 'right')
+        if($request->cssQ7 === 'cssQ7_3')
             $countCorrectAnswer++;
-        if($request->cssQ8 === 'right')
+        if($request->cssQ8 === 'cssQ8_1')
             $countCorrectAnswer++;
-        if($request->cssQ9 === 'right')
+        if($request->cssQ9 === 'cssQ9_2')
             $countCorrectAnswer++;
-        if($request->cssQ10 === 'right')
+        if($request->cssQ10 === 'cssQ10_1')
             $countCorrectAnswer++;
-        if($request->cssQ11 === 'right')
+        if($request->cssQ11 === 'cssQ11_4')
             $countCorrectAnswer++;
-        if($request->cssQ12 === 'right')
+        if($request->cssQ12 === 'cssQ12_2')
             $countCorrectAnswer++;
-        if($request->cssQ13 === 'right')
+        if($request->cssQ13 === 'cssQ13_4')
             $countCorrectAnswer++;
-        if($request->cssQ14 === 'right')
+        if($request->cssQ14 === 'cssQ14_4')
             $countCorrectAnswer++;
-        if($request->cssQ15 === 'right')
+        if($request->cssQ15 === 'cssQ15_3')
             $countCorrectAnswer++;
-        if($request->cssQ16 === 'right')
+        if($request->cssQ16 === 'cssQ16_1')
             $countCorrectAnswer++;
-        if($request->cssQ17 === 'right')
+        if($request->cssQ17 === 'cssQ17_1')
             $countCorrectAnswer++;
-        if($request->cssQ18 === 'right')
+        if($request->cssQ18 === 'cssQ18_3')
             $countCorrectAnswer++;
-        if($request->cssQ19 === 'right')
+        if($request->cssQ19 === 'cssQ19_1')
             $countCorrectAnswer++;
-        if($request->cssQ20 === 'right')
+        if($request->cssQ20 === 'cssQ20_3')
             $countCorrectAnswer++;
-        if($request->cssQ21 === 'right')
+        if($request->cssQ21 === 'cssQ21_2')
             $countCorrectAnswer++;
-        if($request->cssQ22 === 'right')
+        if($request->cssQ22 === 'cssQ22_1')
             $countCorrectAnswer++;
-        if($request->cssQ23 === 'right')
+        if($request->cssQ23 === 'cssQ23_3')
             $countCorrectAnswer++;
-        if($request->cssQ24 === 'right')
+        if($request->cssQ24 === 'cssQ24_1')
             $countCorrectAnswer++;
-        if($request->cssQ25 === 'right')
+        if($request->cssQ25 === 'cssQ25_2')
             $countCorrectAnswer++;
-        if($request->cssQ26 === 'right')
+        if($request->cssQ26 === 'cssQ26_3')
             $countCorrectAnswer++;
-        if($request->cssQ27 === 'right')
+        if($request->cssQ27 === 'cssQ27_3')
             $countCorrectAnswer++;
-        if($request->cssQ28 === 'right')
+        if($request->cssQ28 === 'cssQ28_1')
             $countCorrectAnswer++;
-        if($request->cssQ29 === 'right')
+        if($request->cssQ29 === 'cssQ29_2')
             $countCorrectAnswer++;
-        if($request->cssQ30 === 'right')
-            $countCorrectAnswer++;                                                 
+        if($request->cssQ30 === 'cssQ30_1')
+            $countCorrectAnswer++;
 
         Quiz::create([
             'course_name' => 'css',
@@ -114,56 +114,56 @@ class QuizController extends Controller
         $countCorrectAnswer = 0;
         $correctPrcentage = 0;
 
-        if($request->bootstrapQ1 === 'right')
+        if($request->bootstrapQ1 === 'bootstrapQ1_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ2 === 'right')
+        if($request->bootstrapQ2 === 'bootstrapQ2_4')
             $countCorrectAnswer++;
-        if($request->bootstrapQ3 === 'right')
+        if($request->bootstrapQ3 === 'bootstrapQ3_3')
             $countCorrectAnswer++;
-        if($request->bootstrapQ4 === 'right')
+        if($request->bootstrapQ4 === 'bootstrapQ4_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ5 === 'right')
+        if($request->bootstrapQ5 === 'bootstrapQ5_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ6 === 'right')
+        if($request->bootstrapQ6 === 'bootstrapQ6_2')
             $countCorrectAnswer++;
-        if($request->bootstrapQ7 === 'right')
+        if($request->bootstrapQ7 === 'bootstrapQ7_4')
             $countCorrectAnswer++;
-        if($request->bootstrapQ8 === 'right')
+        if($request->bootstrapQ8 === 'bootstrapQ8_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ9 === 'right')
+        if($request->bootstrapQ9 === 'bootstrapQ9_4')
             $countCorrectAnswer++;
-        if($request->bootstrapQ10 === 'right')
+        if($request->bootstrapQ10 === 'bootstrapQ10_3')
             $countCorrectAnswer++;
-        if($request->bootstrapQ11 === 'right')
+        if($request->bootstrapQ11 === 'bootstrapQ11_2')
             $countCorrectAnswer++;
-        if($request->bootstrapQ12 === 'right')
+        if($request->bootstrapQ12 === 'bootstrapQ12_4')
             $countCorrectAnswer++;
-        if($request->bootstrapQ13 === 'right')
+        if($request->bootstrapQ13 === 'bootstrapQ13_2')
             $countCorrectAnswer++;
-        if($request->bootstrapQ14 === 'right')
+        if($request->bootstrapQ14 === 'bootstrapQ14_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ15 === 'right')
+        if($request->bootstrapQ15 === 'bootstrapQ15_3')
             $countCorrectAnswer++;
-        if($request->bootstrapQ16 === 'right')
+        if($request->bootstrapQ16 === 'bootstrapQ16_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ17 === 'right')
+        if($request->bootstrapQ17 === 'bootstrapQ17_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ18 === 'right')
+        if($request->bootstrapQ18 === 'bootstrapQ18_3')
             $countCorrectAnswer++;
-        if($request->bootstrapQ19 === 'right')
+        if($request->bootstrapQ19 === 'bootstrapQ19_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ20 === 'right')
+        if($request->bootstrapQ20 === 'bootstrapQ20_3')
             $countCorrectAnswer++;
-        if($request->bootstrapQ21 === 'right')
+        if($request->bootstrapQ21 === 'bootstrapQ21_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ22 === 'right')
+        if($request->bootstrapQ22 === 'bootstrapQ22_4')
             $countCorrectAnswer++;
-        if($request->bootstrapQ23 === 'right')
+        if($request->bootstrapQ23 === 'bootstrapQ23_2')
             $countCorrectAnswer++;
-        if($request->bootstrapQ24 === 'right')
+        if($request->bootstrapQ24 === 'bootstrapQ24_1')
             $countCorrectAnswer++;
-        if($request->bootstrapQ25 === 'right')
-            $countCorrectAnswer++;                                                 
+        if($request->bootstrapQ25 === 'bootstrapQ25_3')
+            $countCorrectAnswer++;
 
         Quiz::create([
             'course_name' => 'bootstrap',
