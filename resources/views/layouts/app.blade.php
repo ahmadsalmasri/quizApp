@@ -77,9 +77,10 @@
 
         <main class="py-4">
             @yield('content')
-            
+
         </main>
         @yield('script')
     </div>
+    <link rel="stylesheet" href="{{ asset('css/mystyle.css')}}">
 </body>
 </html>

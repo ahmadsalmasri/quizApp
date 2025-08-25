@@ -36,6 +36,7 @@ Route::group(['middleware' => 'auth:web', 'prefix' => 'quiz'], function () {
     Route::get('/bootstrap-5', [QuizController::class, 'bootstrapquiz'])->name('bootstrapQuiz');
     Route::post('/bootstrap 5-quiz', [QuizController::class, 'bootstrapquizAction'])->name('bootstrapQuizAction');
     Route::get('/jquery', [QuizController::class, 'jqueryquiz'])->name('jqueryQuiz');
+    Route::post('/jquey-quiz', [QuizController::class, 'jqueyquizAction'])->name('jqueyQuizAction');
     Route::get('/vuejs', [QuizController::class, 'vuejsquiz'])->name('vuejsQuiz');
 });
 Auth::routes();

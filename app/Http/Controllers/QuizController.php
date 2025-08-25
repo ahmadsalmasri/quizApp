@@ -243,6 +243,71 @@ class QuizController extends Controller
     public function jqueryquiz() {
         return view('quiz.jquery');
     }
+    public function jqueyquizAction(Request $request)
+    {
+        $countCorrectAnswer = 0;
+        $correctPrcentage = 0;
+
+        if($request->jqueryQ1 === 'jqueryQ1_4')
+            $countCorrectAnswer++;
+        if($request->jqueryQ2 === 'jqueryQ2_2')
+            $countCorrectAnswer++;
+        if($request->jqueryQ3 === 'jqueryQ3_1')
+            $countCorrectAnswer++;
+        if($request->jqueryQ4 === 'jqueryQ4_2')
+            $countCorrectAnswer++;
+        if($request->jqueryQ5 === 'jqueryQ5_1')
+            $countCorrectAnswer++;
+        if($request->jqueryQ6 === 'jqueryQ6_4')
+            $countCorrectAnswer++;
+        if($request->jqueryQ7 === 'jqueryQ7_1')
+            $countCorrectAnswer++;
+        if($request->jqueryQ8 === 'jqueryQ8_3')
+            $countCorrectAnswer++;
+        if($request->jqueryQ9 === 'jqueryQ9_2')
+            $countCorrectAnswer++;
+        if($request->jqueryQ10 === 'jqueryQ10_1')
+            $countCorrectAnswer++;
+        if($request->jqueryQ11 === 'jqueryQ11_2')
+            $countCorrectAnswer++;
+        if($request->jqueryQ12 === 'jqueryQ12_4')
+            $countCorrectAnswer++;
+        if($request->jqueryQ13 === 'jqueryQ13_1')
+            $countCorrectAnswer++;
+        if($request->jqueryQ14 === 'jqueryQ14_2')
+            $countCorrectAnswer++;
+        if($request->jqueryQ15 === 'jqueryQ15_3')
+            $countCorrectAnswer++;
+        if($request->jqueryQ16 === 'jqueryQ16_4')
+            $countCorrectAnswer++;
+        if($request->jqueryQ17 === 'jqueryQ17_1')
+            $countCorrectAnswer++;
+        if($request->jqueryQ18 === 'jqueryQ18_1')
+            $countCorrectAnswer++;
+        if($request->jqueryQ19 === 'jqueryQ19_3')
+            $countCorrectAnswer++;
+        if($request->jqueryQ20 === 'jqueryQ20_2')
+            $countCorrectAnswer++;
+        if($request->jqueryQ21 === 'jqueryQ21_2')
+            $countCorrectAnswer++;
+        if($request->jqueryQ22 === 'jqueryQ22_4')
+            $countCorrectAnswer++;
+        if($request->jqueryQ23 === 'jqueryQ23_1')
+            $countCorrectAnswer++;
+        if($request->jqueryQ24 === 'jqueryQ24_3')
+            $countCorrectAnswer++;
+        if($request->jqueryQ25 === 'jqueryQ25_1')
+            $countCorrectAnswer++;
+
+        Quiz::create([
+            'course_name' => 'jquery',
+            'question_number' => 25,
+            'result' => $countCorrectAnswer,
+            'user_id' => auth()->user()->id,
+        ]);
+        $correctPrcentage = ($countCorrectAnswer * 100) / 25;
+        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 25. Result '. round($correctPrcentage,2). '%']);
+    }
 
     public function vuejsquiz() {
         return view('quiz.vuejs');

@@ -1,0 +1,10 @@
+html, body {
+    background: #EDEDED;
+}
+ol > li {
+    color: blueviolet;
+}
+
+input[type="radio"] {
+    border: 1px solid black;
+}
