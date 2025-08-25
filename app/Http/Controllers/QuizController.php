@@ -105,6 +105,71 @@ class QuizController extends Controller
     public function nodejsquiz() {
         return view('quiz.nodejs');
     }
+    public function nodejsquizAction(Request $request)
+    {
+        $countCorrectAnswer = 0;
+        $correctPrcentage = 0;
+
+        if($request->nodejsQ1 === 'nodejsQ1_2')
+            $countCorrectAnswer++;
+        if($request->nodejsQ2 === 'nodejsQ2_1')
+            $countCorrectAnswer++;
+        if($request->nodejsQ3 === 'nodejsQ3_1')
+            $countCorrectAnswer++;
+        if($request->nodejsQ4 === 'nodejsQ4_4')
+            $countCorrectAnswer++;
+        if($request->nodejsQ5 === 'nodejsQ5_3')
+            $countCorrectAnswer++;
+        if($request->nodejsQ6 === 'nodejsQ6_2')
+            $countCorrectAnswer++;
+        if($request->nodejsQ7 === 'nodejsQ7_1')
+            $countCorrectAnswer++;
+        if($request->nodejsQ8 === 'nodejsQ8_3')
+            $countCorrectAnswer++;
+        if($request->nodejsQ9 === 'nodejsQ9_4')
+            $countCorrectAnswer++;
+        if($request->nodejsQ10 === 'nodejsQ10_4')
+            $countCorrectAnswer++;
+        if($request->nodejsQ11 === 'nodejsQ11_2')
+            $countCorrectAnswer++;
+        if($request->nodejsQ12 === 'nodejsQ12_1')
+            $countCorrectAnswer++;
+        if($request->nodejsQ13 === 'nodejsQ13_2')
+            $countCorrectAnswer++;
+        if($request->nodejsQ14 === 'nodejsQ14_3')
+            $countCorrectAnswer++;
+        if($request->nodejsQ15 === 'nodejsQ15_1')
+            $countCorrectAnswer++;
+        if($request->nodejsQ16 === 'nodejsQ16_4')
+            $countCorrectAnswer++;
+        if($request->nodejsQ17 === 'nodejsQ17_3')
+            $countCorrectAnswer++;
+        if($request->nodejsQ18 === 'nodejsQ18_4')
+            $countCorrectAnswer++;
+        if($request->nodejsQ19 === 'nodejsQ19_2')
+            $countCorrectAnswer++;
+        if($request->nodejsQ20 === 'nodejsQ20_4')
+            $countCorrectAnswer++;
+        if($request->nodejsQ21 === 'nodejsQ21_3')
+            $countCorrectAnswer++;
+        if($request->nodejsQ22 === 'nodejsQ22_1')
+            $countCorrectAnswer++;
+        if($request->nodejsQ23 === 'nodejsQ23_1')
+            $countCorrectAnswer++;
+        if($request->nodejsQ24 === 'nodejsQ24_2')
+            $countCorrectAnswer++;
+        if($request->nodejsQ25 === 'nodejsQ25_4')
+            $countCorrectAnswer++;
+
+        Quiz::create([
+            'course_name' => 'nodejs',
+            'question_number' => 25,
+            'result' => $countCorrectAnswer,
+            'user_id' => auth()->user()->id,
+        ]);
+        $correctPrcentage = ($countCorrectAnswer * 100) / 25;
+        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 25. Result '. round($correctPrcentage,2). '%']);
+    }
 
     public function bootstrapquiz() {
         return view('quiz.bootstrap');
