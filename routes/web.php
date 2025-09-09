@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth:web', 'prefix' => 'quiz'], function () {
     Route::get('/javascript', [QuizController::class, 'jsquiz'])->name('javascriptQuiz');
     Route::post('javascript-quiz', [QuizController::class, 'javascriptquizAction'])->name('javascriptQuizAction');
     Route::get('/python', [QuizController::class, 'pythonquiz'])->name('pythonQuiz');
+    Route::post('python-quiz', [QuizController::class, 'pythonQuizAction'])->name('pythonQuizAction');
     Route::get('/php', [QuizController::class, 'phpquiz'])->name('phpQuiz');
     Route::get('/nodejs', [QuizController::class, 'nodejsquiz'])->name('nodejsQuiz');
     Route::post('/nodejs-quiz', [QuizController::class, 'nodejsquizAction'])->name('nodejsQuizAction');

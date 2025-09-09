@@ -161,6 +161,70 @@ class QuizController extends Controller
     public function pythonquiz() {
         return view('quiz.python');
     }
+    public function pythonQuizAction(Request $request) {
+        $countCorrectAnswer = 0;
+        $correctPrcentage = 0;
+
+        if($request->pythonQ1 === 'pythonQ1_2')
+            $countCorrectAnswer++;
+        if($request->pythonQ2 === 'pythonQ2_1')
+            $countCorrectAnswer++;
+        if($request->pythonQ3 === 'pythonQ3_4')
+            $countCorrectAnswer++;
+        if($request->pythonQ4 === 'pythonQ4_3')
+            $countCorrectAnswer++;
+        if($request->pythonQ5 === 'pythonQ5_1')
+            $countCorrectAnswer++;
+        if($request->pythonQ6 === 'pythonQ6_1')
+            $countCorrectAnswer++;
+        if($request->pythonQ7 === 'pythonQ7_2')
+            $countCorrectAnswer++;
+        if($request->pythonQ8 === 'pythonQ8_2')
+            $countCorrectAnswer++;
+        if($request->pythonQ9 === 'pythonQ9_1')
+            $countCorrectAnswer++;
+        if($request->pythonQ10 === 'pythonQ10_3')
+            $countCorrectAnswer++;
+        if($request->pythonQ11 === 'pythonQ11_4')
+            $countCorrectAnswer++;
+        if($request->pythonQ12 === 'pythonQ12_4')
+            $countCorrectAnswer++;
+        if($request->pythonQ13 === 'pythonQ13_1')
+            $countCorrectAnswer++;
+        if($request->pythonQ14 === 'pythonQ14_2')
+            $countCorrectAnswer++;
+        if($request->pythonQ15 === 'pythonQ15_3')
+            $countCorrectAnswer++;
+        if($request->pythonQ16 === 'pythonQ16_2')
+            $countCorrectAnswer++;
+        if($request->pythonQ17 === 'pythonQ17_3')
+            $countCorrectAnswer++;
+        if($request->pythonQ18 === 'pythonQ18_4')
+            $countCorrectAnswer++;
+        if($request->pythonQ19 === 'pythonQ19_1')
+            $countCorrectAnswer++;
+        if($request->pythonQ20 === 'pythonQ20_1')
+            $countCorrectAnswer++;
+        if($request->pythonQ21 === 'pythonQ21_3')
+            $countCorrectAnswer++;
+        if($request->pythonQ22 === 'pythonQ22_1')
+            $countCorrectAnswer++;
+        if($request->pythonQ23 === 'pythonQ23_2')
+            $countCorrectAnswer++;
+        if($request->pythonQ24 === 'pythonQ24_3')
+            $countCorrectAnswer++;
+        if($request->pythonQ25 === 'pythonQ25_4')
+            $countCorrectAnswer++;
+
+        Quiz::create([
+            'course_name' => 'python',
+            'question_number' => 25,
+            'result' => $countCorrectAnswer,
+            'user_id' => auth()->user()->id,
+        ]);
+        $correctPrcentage = ($countCorrectAnswer * 100) / 25;
+        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 25. Result '. round($correctPrcentage,2). '%']);
+    }
 
     public function phpquiz() {
         return view('quiz.php');
