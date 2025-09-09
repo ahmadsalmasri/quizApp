@@ -15,7 +15,6 @@ class QuizController extends Controller
     public function cssquiz() {
         return view('quiz.css');
     }
-
     public function cssquizAction(Request $request) {
         $countCorrectAnswer = 0;
         $correctPrcentage = 0;
@@ -90,8 +89,73 @@ class QuizController extends Controller
         $correctPrcentage = ($countCorrectAnswer * 100) / 30;
         return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 30. Result '. round($correctPrcentage,2). '%']);
     }
+
     public function jsquiz() {
         return view('quiz.js');
+    }
+    public function javascriptquizAction(Request $request) {
+        $countCorrectAnswer = 0;
+        $correctPrcentage = 0;
+
+        if($request->jsQ1 === 'jsQ1_1')
+            $countCorrectAnswer++;
+        if($request->jsQ2 === 'jsQ2_4')
+            $countCorrectAnswer++;
+        if($request->jsQ3 === 'jsQ3_3')
+            $countCorrectAnswer++;
+        if($request->jsQ4 === 'jsQ4_2')
+            $countCorrectAnswer++;
+        if($request->jsQ5 === 'jsQ5_1')
+            $countCorrectAnswer++;
+        if($request->jsQ6 === 'jsQ6_2')
+            $countCorrectAnswer++;
+        if($request->jsQ7 === 'jsQ7_3')
+            $countCorrectAnswer++;
+        if($request->jsQ8 === 'jsQ8_4')
+            $countCorrectAnswer++;
+        if($request->jsQ9 === 'jsQ9_1')
+            $countCorrectAnswer++;
+        if($request->jsQ10 === 'jsQ10_4')
+            $countCorrectAnswer++;
+        if($request->jsQ11 === 'jsQ11_2')
+            $countCorrectAnswer++;
+        if($request->jsQ12 === 'jsQ12_3')
+            $countCorrectAnswer++;
+        if($request->jsQ13 === 'jsQ13_3')
+            $countCorrectAnswer++;
+        if($request->jsQ14 === 'jsQ14_1')
+            $countCorrectAnswer++;
+        if($request->jsQ15 === 'jsQ15_2')
+            $countCorrectAnswer++;
+        if($request->jsQ16 === 'jsQ16_3')
+            $countCorrectAnswer++;
+        if($request->jsQ17 === 'jsQ17_1')
+            $countCorrectAnswer++;
+        if($request->jsQ18 === 'jsQ18_2')
+            $countCorrectAnswer++;
+        if($request->jsQ19 === 'jsQ19_3')
+            $countCorrectAnswer++;
+        if($request->jsQ20 === 'jsQ20_1')
+            $countCorrectAnswer++;
+        if($request->jsQ21 === 'jsQ21_1')
+            $countCorrectAnswer++;
+        if($request->jsQ22 === 'jsQ22_2')
+            $countCorrectAnswer++;
+        if($request->jsQ23 === 'jsQ23_2')
+            $countCorrectAnswer++;
+        if($request->jsQ24 === 'jsQ24_1')
+            $countCorrectAnswer++;
+        if($request->jsQ25 === 'jsQ25_4')
+            $countCorrectAnswer++;
+
+        Quiz::create([
+            'course_name' => 'javascript',
+            'question_number' => 25,
+            'result' => $countCorrectAnswer,
+            'user_id' => auth()->user()->id,
+        ]);
+        $correctPrcentage = ($countCorrectAnswer * 100) / 25;
+        return redirect()->back()->with(['success_complate' => 'you get '. $countCorrectAnswer . ' out of 25. Result '. round($correctPrcentage,2). '%']);
     }
 
     public function pythonquiz() {

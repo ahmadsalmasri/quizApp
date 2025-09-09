@@ -29,6 +29,7 @@ Route::group(['middleware' => 'auth:web', 'prefix' => 'quiz'], function () {
     Route::get('/css', [QuizController::class, 'cssquiz'])->name('cssQuiz');
     Route::post('/css-quiz' , [QuizController::class, 'cssquizAction'])->name('cssQuizAction');
     Route::get('/javascript', [QuizController::class, 'jsquiz'])->name('javascriptQuiz');
+    Route::post('javascript-quiz', [QuizController::class, 'javascriptquizAction'])->name('javascriptQuizAction');
     Route::get('/python', [QuizController::class, 'pythonquiz'])->name('pythonQuiz');
     Route::get('/php', [QuizController::class, 'phpquiz'])->name('phpQuiz');
     Route::get('/nodejs', [QuizController::class, 'nodejsquiz'])->name('nodejsQuiz');
@@ -39,6 +40,3 @@ Route::group(['middleware' => 'auth:web', 'prefix' => 'quiz'], function () {
     Route::post('/jquey-quiz', [QuizController::class, 'jqueyquizAction'])->name('jqueyQuizAction');
     Route::get('/vuejs', [QuizController::class, 'vuejsquiz'])->name('vuejsQuiz');
 });
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
